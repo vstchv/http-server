@@ -10,5 +10,4 @@ const server = net.createServer((socket) => {
     socket.end();
   });
 });
-
 server.listen(4221, "::"); // binds to IPv6 and may accept IPv4-mapped addresses
