@@ -1,37 +1,24 @@
-[![progress-banner](https://backend.codecrafters.io/progress/http-server/b6f969cb-e216-4a87-80e8-56048c271ce1)](https://app.codecrafters.io/users/codecrafters-bot?r=2qF)
+# Build Your Own HTTP Server – JavaScript
 
-This is a starting point for JavaScript solutions to the
-["Build Your Own HTTP server" Challenge](https://app.codecrafters.io/courses/http-server/overview).
+This is my implementation of the [Codecrafters](https://codecrafters.io) "Build Your Own HTTP Server" challenge using Node.js.
 
-[HTTP](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol) is the
-protocol that powers the web. In this challenge, you'll build a HTTP/1.1 server
-that is capable of serving multiple clients.
+A simple HTTP/1.1 server built from scratch using raw TCP sockets (via Node's `net` module).
 
-Along the way you'll learn about TCP servers,
-[HTTP request syntax](https://www.w3.org/Protocols/rfc2616/rfc2616-sec5.html),
-and more.
+## 🚀 Getting Started
 
-**Note**: If you're viewing this repo on GitHub, head over to
-[codecrafters.io](https://codecrafters.io) to try the challenge.
+1. **Install Node.js 21+**
 
-# Passing the first stage
+2. **Run the server**
 
-The entry point for your HTTP server implementation is in `app/main.js`. Study
-and uncomment the relevant code, and push your changes to pass the first stage:
+   ```bash
+   ./your_program.sh
+   ```
 
-```sh
-git commit -am "pass 1st stage" # any msg
-git push origin master
-```
+   or
 
-Time to move on to the next stage!
+   ```powershell
+   node app/main.js
+   ```
 
-# Stage 2 & beyond
-
-Note: This section is for stages 2 and beyond.
-
-1. Ensure you have `node (21)` installed locally
-1. Run `./your_program.sh` to run your program, which is implemented in
-   `app/main.js`.
-1. Commit your changes and run `git push origin master` to submit your solution
-   to CodeCrafters. Test output will be streamed to your terminal.
+3. **Main Logic** is in
+   `app/main.js`

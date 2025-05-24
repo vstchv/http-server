@@ -5,8 +5,21 @@ console.log("Listening on port 4221");
 
 const server = net.createServer((socket) => {
   socket.on("data", (data) => {
-    const resp = "HTTP/1.1 200 OK\r\n\r\n";
-    socket.write(resp);
+    const request = data.toString();
+
+    const [requestLine] = request.split("\r\n");
+    const [method, path, httpVersion] = requestLine.split(" ");
+
+    let response;
+    if (method === "GET" && path === "/") {
+      response = "HTTP/1.1 200 OK\r\n\r\n";
+    } else {
+      response = "HTTP/1.1 404 Not Found\r\n\r\n";
+    }
+
+    console.log(response);
+
+    socket.write(data);
     socket.end();
   });
 });
